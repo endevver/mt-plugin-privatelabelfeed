@@ -4,6 +4,7 @@ id: PrivateLabelFeed
 key: PrivateLabelFeed
 author_name: Endevver, LLC
 author_link: http://endevver.com/
+plugin_link: https://github.com/endevver/mt-plugin-privatelabelfeed
 static_version: 0
 description: "Setup a local redirect to a third party feed server."
 
