@@ -10,7 +10,7 @@ sub callback_build_file {
     my $file = $args{file};
     my $file_info = $args{file_info};
     my $template = $args{template};
-    
+
     if (
         $template
         && $template->identifier
@@ -27,19 +27,19 @@ sub callback_build_file {
             # feed url is set, so we need to move the file
             my @file_bits = split /\//, $file;
             my $file_name = pop @file_bits;
-            
+
             my @file_name_bits = split /\./, $file_name;
             my $file_short_name = $file_name_bits[0];
-            
+
             my $ext = $file_name_bits[1];
-            
+
             my $file_dir = join '/', @file_bits;
 
             my $new_file_name = "$file_short_name-private.$ext";
             my $new_file_path = join '/', ($file_dir, $new_file_name);
-            
+
             File::Copy::copy($file, $new_file_path);
-        }        
+        }
     }
 }
 
