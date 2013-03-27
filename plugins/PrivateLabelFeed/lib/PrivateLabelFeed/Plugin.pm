@@ -11,7 +11,11 @@ sub callback_build_file {
     my $file_info = $args{file_info};
     my $template = $args{template};
     
-    if ($template->identifier eq 'feed_recent') {
+    if (
+        $template
+        && $template->identifier
+        && $template->identifier eq 'feed_recent'
+    ) {
         my $blog = $args{blog};
         my $blog_id = $blog->id;
         my $scope = "blog:" . $blog->id;
